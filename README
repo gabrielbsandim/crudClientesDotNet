@@ -1,0 +1,7 @@
+O arquivo db_gabriel é um script que deve ser executado em seu banco local para importar as tabelas e o banco do projeto.
+
+IMPORTANTE
+Modificar na linha 12 do arquivo ClienteDAL.cs o nome da sua conexão local do SQL Server.
+No meu caso, está como: LAPTOP-F2MTS77P\SQLEXPRESS01
+
+Grato.

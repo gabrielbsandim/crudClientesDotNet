@@ -1,0 +1,72 @@
+﻿@model IEnumerable<crud.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<p>
+    <a asp-action="Create"><button type="button" class="btn btn-primary">Criar novo cliente</button></a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClienteId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Idade)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.ClienteId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id=item.ClienteId }) |
+                    @Html.ActionLink("Deletar", "Delete", new { id=item.ClienteId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
